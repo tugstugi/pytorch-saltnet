@@ -18,7 +18,7 @@ The final private LB score 0.892 was achieved by post processing on the model's 
     * copy `train.csv` into `datasets/`
     * copy train images and masks into `datasets/train/`
     * copy test images into `datasets/test/`
-2. Train SENet154-Unet for 250 epochs: `python train.py --vtf --pretrained imagenet --loss-on-center --batch-size 32 --optim adamw --learning-rate 5e-4 --lr-scheduler noam --basenet senet154 --max-epochs 250 --data-fold fold0 --log-dir runs/fold0 --resume runs/fold0/checkpoints/last-checkpoint-fold0.pth`
+2. Train SENet154-Unet for 250 epochs on 2x P100: `python train.py --vtf --pretrained imagenet --loss-on-center --batch-size 32 --optim adamw --learning-rate 5e-4 --lr-scheduler noam --basenet senet154 --max-epochs 250 --data-fold fold0 --log-dir runs/fold0 --resume runs/fold0/checkpoints/last-checkpoint-fold0.pth`
     * tensorboard logs, checkpoints and models are saved under `runs/`
     * start tensorboard with `tensorboard --logdir runs`
     * training log of a LB0.883 model is provided under `runs/lb0.883_fold0/`
