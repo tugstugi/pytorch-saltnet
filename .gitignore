@@ -1,0 +1,5 @@
+.idea/
+*.pyc
+*.pth
+.DS_Store
+runs/

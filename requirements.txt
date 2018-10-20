@@ -1,0 +1,9 @@
+torch>=0.4.1
+tensorboardX>=1.2
+tqdm>=4.15.0
+numpy>=1.13.1
+scipy
+pandas
+torchvision
+opencv-python
+scikit-image
