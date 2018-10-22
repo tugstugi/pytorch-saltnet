@@ -13,6 +13,14 @@ With 10 folds using reflective padding and another 10 folds with resizing, we go
 The final private LB score 0.892 was achieved by post processing on the model's output.
 
 
+## Features
+
+Our main improvement (+0.02 LB) comes from our symmetric extension of the [Lovasz loss](https://github.com/bermanmaxim/LovaszSoftmax) function:
+```python
+def symmetric_lovasz(outputs, targets):
+    return (lovasz_hinge(outputs, targets) + lovasz_hinge(-outputs, 1 - targets)) / 2
+```
+
 ## Training
 1. Download and extract the [dataset](https://www.kaggle.com/c/tgs-salt-identification-challenge/data)
     * copy `train.csv` into `datasets/`
