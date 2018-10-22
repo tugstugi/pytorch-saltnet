@@ -7,3 +7,4 @@ pandas
 torchvision
 opencv-python
 scikit-image
+pretrainedmodels
