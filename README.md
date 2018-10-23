@@ -15,7 +15,8 @@ The final private LB score 0.892 was achieved by post processing on the model's 
 
 ## Features
 
-* single model
+* single [UNet](https://arxiv.org/abs/1505.04597) model with a [Squeeze-and-Excitation network](https://arxiv.org/abs/1709.01507) encoder
+* no ensembling, no pseudo labeling
 * [object context](https://arxiv.org/abs/1809.00916) in the decoders and in the base
 * symmetric extension of the [Lovasz hinge loss](https://arxiv.org/abs/1705.08790) function (+0.02 private LB):
 ```python
