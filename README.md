@@ -16,7 +16,7 @@ The final private LB score 0.892 was achieved by post processing on the model's 
 ## Features
 
 * single model
-* symmetric extension of the [Lovasz loss](https://github.com/bermanmaxim/LovaszSoftmax) function ((+0.02 private LB)):
+* symmetric extension of the [Lovasz loss](https://github.com/bermanmaxim/LovaszSoftmax) function (+0.02 private LB):
 ```python
 def symmetric_lovasz(outputs, targets):
     return (lovasz_hinge(outputs, targets) + lovasz_hinge(-outputs, 1 - targets)) / 2
